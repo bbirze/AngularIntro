@@ -6,6 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./subscription-form.component.css']
 })
 export class SubscriptionFormComponent implements OnInit {
+                // expect to be passed our interests array
   @Input() interests:[string]
 
   constructor() { }
