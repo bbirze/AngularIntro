@@ -5,7 +5,7 @@ export class News {
     body: string
 }
 
-@Injectable({
+@Injectable({                       // Make me a service!
     providedIn: 'root'
 })
 export class NewsService {

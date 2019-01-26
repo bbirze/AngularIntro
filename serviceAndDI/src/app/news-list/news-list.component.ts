@@ -15,12 +15,12 @@ export class NewsListComponent implements OnInit {
     return false
   }
 
-  constructor(private newsSvc:NewsService) {
+  constructor(private newsSvc:NewsService) {      // service injected into field newsSvc
     this.selectedNewsId = 0
    }
 
-  ngOnInit() {
-    this.newsItems = this.newsSvc.getNewsItems()
+  ngOnInit() {                                    // used injected field newsSvc
+    this.newsItems = this.newsSvc.getNewsItems()  
   }
 
 }

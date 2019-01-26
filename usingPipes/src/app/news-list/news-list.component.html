@@ -1,6 +1,12 @@
 <div>
 	<input type='text' [(ngModel)]="searchText" placeholder="Search"/>
+
+	<!-- use our custom pipe with name, newsSearch, give it the searchText 
+	-->
 	<div *ngFor="let news of (newsItems | newsSearch:searchText); let newsId=index">
+
+		<!-- use built in uppercase pipe, easy peasy 
+		-->
 		<h3>{{news.title | uppercase}}</h3>
 		<p [ngClass]="{collapsed: selectedNewsId != newsId}">
 			{{news.body}}

@@ -19,6 +19,10 @@ export class NewsListComponent implements OnInit {
     this.selectedNewsId = 0
    }
 
+    // Observable subscribe functions will get 1 param, a response function
+    //    When request returns, function will be called and response will be 
+    //    set to the return data, an array of News objects
+    //
   ngOnInit() {
     this.newsSvc.getNewsItems().subscribe(response => {
       this.newsItems = response

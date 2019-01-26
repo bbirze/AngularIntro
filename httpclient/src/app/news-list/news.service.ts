@@ -13,7 +13,11 @@ export class News {
 export class NewsService {
     constructor(private httpClient:HttpClient) {}
  
-      getNewsItems() : Observable<News[]> {
-         return this.httpClient.get<News[]>('/assets/news_data.json')
-      }
+    // use safe typing on Observable using generics
+    // get returns an Observable which will return
+    // to subscribers an array of News objects 
+    //
+    getNewsItems() : Observable<News[]> {
+        return this.httpClient.get<News[]>('/assets/news_data.json')
+    }
 }

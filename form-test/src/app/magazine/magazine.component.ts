@@ -15,7 +15,11 @@ export class MagazineComponent implements OnInit {
   selectedEdition = this.editions[0]    // choose US as default
   selectedShipping = ""
   acceptPolicy = false
-
+  
+  // create requestData object as collection of our property value 
+  //     these were set with [(ngModel)] 2-way binding
+  //     can then display the requestData with an alert
+  //
   submitForm() {
     let requestData = {
       customerName: this.fullName,

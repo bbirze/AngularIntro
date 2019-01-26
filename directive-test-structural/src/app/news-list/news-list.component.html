@@ -1,4 +1,5 @@
 <div>
+	<!-- Iteratve over the newsItems array -->
 	<div *ngFor="let news of newsItems; let newsId=index">
 		<h3>{{news.title}}</h3>
 		<p [ngClass]="{collapsed: selectedNewsId != newsId}">

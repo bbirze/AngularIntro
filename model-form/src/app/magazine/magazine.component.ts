@@ -13,11 +13,11 @@ export class MagazineComponent implements OnInit {
     {editionCode: 2, edditionName: "Canada", price: "14.99 CAD" },
     {editionCode: 3, edditionName: "International", price: "23.99 USD" },
   ]
-  selectedEdition = this.editions[0]    // choose US as default
+  selectedEdition = this.editions[0]    
   selectedShipping = ""
   acceptPolicy = false
 
-  magazineForm = new FormGroup({
+  magazineForm = new FormGroup({        // Used in <form> directive: [formGroup]="magazineForm"
     fullName: new FormControl('', [Validators.required]),
     selectedEdition: new FormControl(this.editions[0]),
     selectedShipping: new FormControl(''),

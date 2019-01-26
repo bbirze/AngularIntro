@@ -7,12 +7,12 @@ import { NewsListComponent } from './news-list/news-list.component';
 @NgModule({
   declarations: [
     AppComponent,
-    NewsListComponent
+    NewsListComponent             // uses the NewsService 
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [],                  // Injectables go in the providers array
   bootstrap: [AppComponent]
 })
 export class AppModule { }

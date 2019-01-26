@@ -1,6 +1,8 @@
+/* Note : styles are private to this component */
+
 input[type='text'] {
     border-color:black; 
-    boarder-width:thin; 
+    border-width:thin; 
     border-radius:6px; 
     height:20pt;
 }
