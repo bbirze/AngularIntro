@@ -5,6 +5,7 @@
 		<p [ngClass]="{collapsed: selectedNewsId != newsId}">
 			{{news.body}}
 		</p>
+		<!-- if selected item, don't insert this anchor in the DOM  -->
 		<a href (click)="expandNews(newsId)"  
 				*ngIf="selectedNewsId != newsId">More...</a>
 	

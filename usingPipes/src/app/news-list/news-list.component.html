@@ -3,7 +3,8 @@
 
 	<!-- use our custom pipe with name, newsSearch, give it the searchText 
 	-->
-	<div *ngFor="let news of (newsItems | newsSearch:searchText); let newsId=index">
+	<div *ngFor="let news of (newsItems | newsSearch:searchText); 
+			  let newsId=index">
 
 		<!-- use built in uppercase pipe, easy peasy 
 		-->

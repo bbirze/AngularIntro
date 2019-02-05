@@ -1,6 +1,7 @@
 
 <p>Please enter a credit card number:</p>
-<p>
+<p>  
+  <!-- Bind both <input> and ccNumber to creditCardNumer property -->
   <input type="text" [(ngModel)]="creditCardNumber"/>
   <img appCcLogo [ccNumber]="creditCardNumber" />
 </p>
