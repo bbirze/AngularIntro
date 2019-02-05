@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsListComponent implements OnInit {
   selectedNewsId:number
-  newsItems = [
+  newsItems = [            // no longer hard coding news items in our tempate!
     {
         title: "BMW Researching Self-Driving Cars",
         body: "We failed to anticipate how difficult it would be to program even the most sophisticated computers available today to emulate the selfish and asinine behaviour of the typical BMW driver. We ended up sending our software team to a psychiatric hospital to interview some pathological narcissists."

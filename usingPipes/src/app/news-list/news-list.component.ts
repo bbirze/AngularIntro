@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsService, News } from './news.service';
 // only using news-serarch.pipe in template, so don't need to import it
+//         component code stays clean!
 
 @Component({
   selector: 'app-news-list',

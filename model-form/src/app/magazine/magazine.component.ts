@@ -18,7 +18,8 @@ export class MagazineComponent implements OnInit {
   acceptPolicy = false
 
   magazineForm = new FormGroup({        // Used in <form> directive: [formGroup]="magazineForm"
-    fullName: new FormControl('', [Validators.required]),
+    //fullName: new FormControl('', [Validators.required]),
+    fullName: new FormControl('', Validators.required),     /// array not required if only one
     selectedEdition: new FormControl(this.editions[0]),
     selectedShipping: new FormControl(''),
     acceptPolicy: new FormControl(false),

@@ -12,10 +12,10 @@ class Cat {
   }
 }
 
-// does not compile even with no constructor
+//does not compile even with no constructor
 // var cat1:Cat = { name:'fluffy', type:'tabby' }
 // var cat2:Cat = { name:'ginger', type:'simamese' }
-//var cat3:Cat = new Cat
+// var cat3:Cat = new Cat
 var cat1:Cat = new Cat('fluffy', 'tabby')
 var cat2:Cat = new Cat('ginger', 'simamese')
 var cat3:Cat = new Cat('', '')

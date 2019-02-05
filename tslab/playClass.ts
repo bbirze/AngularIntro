@@ -71,10 +71,10 @@ test(t);
 t.cancelationFee = 100.00
 cancelBooking(t)
 
-var d = new Dining(2, "Sushi", 6.50);
-d.title = "Sushi For All";
-d.price = 12.00;
-test(d);
+var d = new Dining(2, "Sushi", 6.50)
+d.title = "Sushi For All"
+d.price = 12.00
+test(d)
 
-
+//cancelBooking(d)
 

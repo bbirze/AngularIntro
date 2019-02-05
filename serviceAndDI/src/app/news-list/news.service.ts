@@ -1,6 +1,10 @@
 import {Injectable} from '@angular/core'
 
-export class News {
+// a DAO serivce needs to transform raw data into an object type usable 
+// by its consumers.  The object type we will be converving too is this
+// News class.
+//
+export class News {                 
     title: string
     body: string
 }
@@ -9,7 +13,7 @@ export class News {
     providedIn: 'root'
 })
 export class NewsService {
-    newsItems : News[] = [
+    newsItems : News[] = [          // Mock an array of News objects to return
         {
             title: "BMW Researching Self-Driving Cars",
             body: "We failed to anticipate how difficult it would be to program even the most sophisticated computers available today to emulate the selfish and asinine behaviour of the typical BMW driver. We ended up sending our software team to a psychiatric hospital to interview some pathological narcissists."

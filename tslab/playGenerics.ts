@@ -58,7 +58,13 @@ class DiningGen extends ProductGen {
 function testGen(p: ProductGen)  {
     p.printDetails();
 }
-function cancelBookingGen<T extends Cancelable & Product>(c: T) {
+
+// use generic to ensure the type we get extends both
+// Cancelable And Product.  This lets us access title, price
+// and canclation Fee knowing they areguarenteed to be
+// properties of the object
+//
+function cancelBookingGen<T extends Cancelable & ProductGen>(c: T) {
     console.log("Canceling: %s (%d) ", c.title, c.id)
     console.log("Price    : %d ", c.price)
     console.log("Cancelation Fee: %d ", c.cancelationFee)

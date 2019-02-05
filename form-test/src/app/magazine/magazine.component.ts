@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+// no need to import FormsModule 
+//     since all form stuff is being done in the template
 
 @Component({
   selector: 'app-magazine',
@@ -16,6 +18,8 @@ export class MagazineComponent implements OnInit {
   selectedShipping = ""
   acceptPolicy = false
   
+  // Not using a <form> tag, so we'll do the bundling of all
+  //     the controls ourself
   // create requestData object as collection of our property value 
   //     these were set with [(ngModel)] 2-way binding
   //     can then display the requestData with an alert

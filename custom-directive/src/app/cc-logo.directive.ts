@@ -1,4 +1,9 @@
 import { Directive, HostBinding, Input } from '@angular/core';
+// @HostBinding:  set properties on the directives's Host element or component 
+//                e.g. @HostBinding('src') imageSrc
+//
+// @HostListener: listen for events on the directive's Host element or component
+//                e.g. @HostListener(click)
 
 @Directive({
   selector: '[appCcLogo]'
@@ -19,7 +24,8 @@ export class CcLogoDirective {
     return undefined
   }
 
-  ngOnChanges() {
+  // called whenever bound prop ccNumber changes
+  ngOnChanges() {     
     const ccType = this.getCCType()
     this.isHidden = ccType == undefined
     this.imageSrc = `assets/${ccType}.png`
