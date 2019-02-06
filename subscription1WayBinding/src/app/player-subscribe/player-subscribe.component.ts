@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlayerSubscribeComponent implements OnInit {
 
-  players = [ "LeBron James", "Lionel Messi", "Manny Pacquiao" ]
+  players = [ "LeBron James", "Lionel Messi", "Manny Pacquiao", "Domino Birze" ]
 
   constructor() { }
 
