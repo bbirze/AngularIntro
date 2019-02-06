@@ -1,7 +1,7 @@
 interface ConfigOption {
     directory: string
     file: string
-    maxSize?: number
+    maxSize?: number        // ? means optional prop
 }
 
 // Force the object we receive to conform
@@ -14,7 +14,9 @@ function configSomething(op: ConfigOption) {
     console.log("File     : %s", op.file)
     console.log("Max Size : %s", op.maxSize)
 }
-
+// json object infered to be ConfigOptin by compiler
+// because using it as parameter to configSomething()
+//
 configSomething({
     directory: "/dir1",
     file: "persons.json",

@@ -37,24 +37,6 @@ class TourGen extends ProductGen implements Bookable, Cancelable {
     }
 }
 
-class DiningGen extends ProductGen {
-    cusine: string;
-    childPrice: number;
-
-    constructor(id: number, cusine: string, childPrice: number)  {
-        super(id);
-        this.cusine = cusine;
-        this.childPrice = childPrice;
-    }
-
-    printDetails()  {
-        super.printDetails();
-        console.log(`cusine: ${this.cusine}`);
-        console.log(`Child Price: ${this.childPrice}
-        `);
-    }
-}
-
 function testGen(p: ProductGen)  {
     p.printDetails();
 }

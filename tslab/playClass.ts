@@ -5,7 +5,6 @@ interface Bookable {
 interface Cancelable {
     cancelationFee: number;
 }
-
 class Product {
     title: string;
     price: number;
@@ -14,14 +13,12 @@ class Product {
     constructor(id: number) {
         this.id = id;
     }
-
     printDetails()  {
         console.log(`Title: ${this.title}`);
         console.log(`ID   : ${this.id}`);
         console.log(`Price: ${this.price}`);
     }
 }
-
 class Tour extends Product implements Bookable, Cancelable {
     duration: string;
     availableDates: [Date];
@@ -47,7 +44,6 @@ class Dining extends Product {
         this.cusine = cusine;
         this.childPrice = childPrice;
     }
-
     printDetails()  {
         super.printDetails();
         console.log(`cusine: ${this.cusine}`);
@@ -63,6 +59,11 @@ function cancelBooking(c: Cancelable) {
     console.log("Canceling booking, Charges: %d \n", c.cancelationFee)
 }
 
+var d = new Dining(2, "Sushi", 6.50)
+d.title = "Sushi For All"
+d.price = 12.00
+test(d)
+
 var t = new Tour(1, "8 hours");
 t.title = "Trip to the Taj Mahal";
 t.price = 1200.00;
@@ -70,11 +71,6 @@ test(t);
 
 t.cancelationFee = 100.00
 cancelBooking(t)
-
-var d = new Dining(2, "Sushi", 6.50)
-d.title = "Sushi For All"
-d.price = 12.00
-test(d)
 
 //cancelBooking(d)
 
