@@ -28,18 +28,14 @@ export class NewsListComponent implements OnInit {
       title: "Kumbaya Moment Caught on Capital Hill",
         body: "Washington D.C. - After eating brownies left by a good samaratin in the congressional breakroom, members of congress laughed, hugged, and sang Kumbaya with their peers, regardless of party affiliation."
     }
-
   ]
   expandNews(id:number)  {
     this.selectedNewsId = id
     return false
   }
-
   constructor() {
-    this.selectedNewsId = 0
+    this.selectedNewsId = 0     // start with 1st item selected
    }
-
   ngOnInit() {
   }
-
 }

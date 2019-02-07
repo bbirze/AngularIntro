@@ -12,10 +12,6 @@ export class NewsListComponent implements OnInit {
     this.selectedNewsId = id
     return false
   }
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  constructor() {}
+  ngOnInit()    {}
 }
