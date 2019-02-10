@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-@Component({
+@Component({                  // Angular Decorator
   selector: 'app-root',
   template: `
   <h3>Register for our Newsletter!</h3>

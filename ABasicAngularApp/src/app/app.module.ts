@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { BindingsComponent } from './bindings/bindings.component';
 
 
-@NgModule({
+@NgModule({                  // Angular Decorator
   declarations: [
     AppComponent,
     BindingsComponent
