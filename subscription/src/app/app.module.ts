@@ -7,8 +7,8 @@ import { FancyCheckbox } from './fancy-checkbox/fancy-checkbox.component';
 import { SubscriptionFormComponent } from './subscription-form/subscription-form.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
+  declarations: [           // must be in this array for rest of app to 
+    AppComponent,           // be able to import our components!
     FancyText,
     FancyCheckbox,
     SubscriptionFormComponent

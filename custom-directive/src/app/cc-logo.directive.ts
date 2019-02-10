@@ -9,6 +9,7 @@ import { Directive, HostBinding, Input } from '@angular/core';
   selector: '[appCcLogo]'
 })
 export class CcLogoDirective {
+  // our Host is the <img> DOM element
   @HostBinding('src') imageSrc
   @HostBinding('hidden') isHidden:boolean
   @Input() ccNumber: string=""
@@ -28,9 +29,12 @@ export class CcLogoDirective {
   ngOnChanges() {     
     const ccType = this.getCCType()
     this.isHidden = ccType == undefined
-    this.imageSrc = `assets/${ccType}.png`
+    if (!this.isHidden)  {
+      this.imageSrc = `assets/${ccType}.png`
+    }
   }
 
-  constructor() { }
+  constructor() {}    // use @HostBinding for selected DOM elements
+                      // instead of injecting ElementRef in constructor
 
 }
