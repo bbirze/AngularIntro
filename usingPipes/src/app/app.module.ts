@@ -11,7 +11,7 @@ import { NewsSearchPipe } from './news-list/news-search.pipe';
   declarations: [
     AppComponent,
     NewsListComponent,
-    NewsSearchPipe
+    NewsSearchPipe            // Declare so available to rest of app
   ],
   imports: [
     BrowserModule,

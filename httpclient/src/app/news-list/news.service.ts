@@ -11,6 +11,7 @@ export class News {
     providedIn: 'root'
 })
 export class NewsService {
+                                // our service is using a service...
     constructor(private httpClient:HttpClient) {}
  
     // use safe typing on Observable using generics

@@ -8,19 +8,19 @@ import { NewsService, News } from './news.service';
 })
 export class NewsListComponent implements OnInit {
   selectedNewsId:number
-  newsItems : News[] = []                         // get our news from our NewsService
+  newsItems : News[] = []                         // typed array, only hold News instances
  
   expandNews(id:number)  {
     this.selectedNewsId = id
     return false
   }
-
+  // no work done in constructor
   constructor(private newsSvc:NewsService) {      // service injected into field newsSvc field
     this.selectedNewsId = 0
    }
-
+  // do work in ngOnInit
   ngOnInit() {                                    // used injected field newsSvc
-    this.newsItems = this.newsSvc.getNewsItems()  // to poppulate our newsItem field
+    this.newsItems = this.newsSvc.getNewsItems()  // to populate our newsItem field
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+                                    // input reactive form classes
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
@@ -7,25 +8,22 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./magazine.component.css']
 })
 export class MagazineComponent implements OnInit {
-  fullName = ""
   editions = [
     {editionCode: 1, edditionName: "US", price: "10.99 USD" },
     {editionCode: 2, edditionName: "Canada", price: "14.99 CAD" },
     {editionCode: 3, edditionName: "International", price: "23.99 USD" },
   ]
-  selectedEdition = this.editions[0]    
-  selectedShipping = ""
-  acceptPolicy = false
 
-  magazineForm = new FormGroup({        // Used in <form> directive: [formGroup]="magazineForm"
-    //fullName: new FormControl('', [Validators.required]),
-    fullName: new FormControl('', Validators.required),     /// array not required if only one
+  magazineForm = new FormGroup({      // Used in <form> directive: [formGroup]="magazineForm"
+                                      // array not required if only one validator
+  //fullName: new FormControl('', [Validators.required]),
+    fullName: new FormControl('', Validators.required),     
     selectedEdition: new FormControl(this.editions[0]),
     selectedShipping: new FormControl(''),
     acceptPolicy: new FormControl(false),
   })
 
-  submitForm() {
+  submitForm() {                        // get form control values from form 
     let requestData = this.magazineForm.value
     alert(JSON.stringify(requestData))
   }

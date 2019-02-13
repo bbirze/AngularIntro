@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { NewsListComponent } from './news-list/news-list.component';
+                                  // referenced, so will be prod app bundle
+//import { NewsService } from './news-list/news.service';
 
 @NgModule({
   declarations: [
@@ -12,7 +14,8 @@ import { NewsListComponent } from './news-list/news-list.component';
   imports: [
     BrowserModule
   ],
-  providers: [],                  // Injectables go in the providers array
+//  providers: [NewsService],     // Injectables go in the providers array
+  providers: [],                  // Angular6 way, service dictates where registered
   bootstrap: [AppComponent]
 })
 export class AppModule { }

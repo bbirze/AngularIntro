@@ -10,11 +10,12 @@ import { NewsComponent } from './news/news.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },     // the Home startup page
   { path: 'about', component: AboutComponent },
-  { path: 'news', component: NewsComponent }, 
+  { path: 'news',  component: NewsComponent }, 
+  { path: '**', component: HomeComponent }, 
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],    // set routes on import
   exports: [RouterModule]                     // export so available to app.module
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

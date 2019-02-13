@@ -24,12 +24,13 @@ export class NewsListComponent implements OnInit {
     //    set to the return data, an array of News objects
     //
   ngOnInit() {
-    this.newsSvc.getNewsItems().subscribe(response => {
-      this.newsItems = response
-    },
-    error => {
-      alert("Sorry, there was a problem getting data.")
-    })
+    this.newsSvc.getNewsItems().subscribe(
+      response => {
+        this.newsItems = response
+      },
+      error => {
+        alert("Sorry, there was a problem getting data.")
+      })
   }
 
 }

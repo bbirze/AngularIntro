@@ -10,7 +10,7 @@ export class News {
 }
 
 @Injectable({                       // Make me a service!
-    providedIn: 'root'
+    providedIn: 'root'              // register with AppModule injector
 })
 export class NewsService {
     newsItems : News[] = [          // Mock an array of News objects to return

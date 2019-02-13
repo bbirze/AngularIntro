@@ -11,7 +11,7 @@ import { NewsService, News } from './news.service';
 export class NewsListComponent implements OnInit {
   selectedNewsId:number
   newsItems : News[] = []
-  searchText : string
+  searchText : string         // new search text input prop
  
   expandNews(id:number)  {
     this.selectedNewsId = id

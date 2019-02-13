@@ -26,4 +26,4 @@ import { NewsComponent } from './news/news.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

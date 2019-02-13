@@ -16,7 +16,15 @@ export class MagazineComponent implements OnInit {
   selectedShipping = ""
   acceptPolicy = false
 
-  submitForm() {
+  // submitForm arg theForm references ngForm
+  // ngForm creates a top-level FormGroup instance and binds it 
+  //        to a form DOM node
+  //        so to get the form object, need to use the theForm.form property
+  //
+  submitForm(theForm) {
+                                        // get values from theForm template variable
+    console.log(`Form Values: ${JSON.stringify(theForm.form.value)}`)
+                                        // OR get values component properties
     let requestData = {
       customerName: this.fullName,
       productCode : this.selectedEdition.editionCode,

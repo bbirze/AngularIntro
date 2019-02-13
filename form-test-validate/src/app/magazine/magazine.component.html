@@ -1,7 +1,11 @@
 <!-- Things change when we use the <form> tag!
-     Now all our controls are children of our form
-     Means #theForm template varialbe is local to all
-     our form controls!
+
+     #theForm template variable references ngForm
+     ngForm Creates a top-level FormGroup instance 
+            and binds it to a form DOM node 
+
+     Now all our controls are children of our form. Means #theForm 
+     template variable is local to all our form controls!
 -->
 <form #theForm="ngForm">
   Full name: <br/>
@@ -35,7 +39,8 @@
   <br/>
   Price: {{selectedEdition.price}}
   <br/>
-  <button [disabled]="theForm.invalid || !acceptPolicy" (click)="submitForm()">
+  <button [disabled]="theForm.invalid || !acceptPolicy" 
+          (click)="submitForm(theForm)">
     Purchase
   </button>
 </form>
