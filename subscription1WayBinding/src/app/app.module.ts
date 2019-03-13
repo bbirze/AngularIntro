@@ -6,6 +6,7 @@ import { FancyText } from './fancy-text/fancy-text.component';
 import { FancyCheckbox } from './fancy-checkbox/fancy-checkbox.component';
 import { SubscriptionFormComponent } from './subscription-form/subscription-form.component';
 import { PlayerSubscribeComponent } from './player-subscribe/player-subscribe.component';
+import { SportSubscibeComponent } from './sport-subscibe/sport-subscibe.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { PlayerSubscribeComponent } from './player-subscribe/player-subscribe.co
     FancyText,
     FancyCheckbox,
     SubscriptionFormComponent,
-    PlayerSubscribeComponent
+    PlayerSubscribeComponent,
+    SportSubscibeComponent
   ],
   imports: [
     BrowserModule

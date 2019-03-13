@@ -19,7 +19,7 @@ export class MagazineComponent implements OnInit {
   //fullName: new FormControl('', [Validators.required]),
     fullName: new FormControl('', Validators.required),     
     selectedEdition: new FormControl(this.editions[0]),
-    selectedShipping: new FormControl(''),
+    selectedShipping: new FormControl(),
     acceptPolicy: new FormControl(false),
   })
 

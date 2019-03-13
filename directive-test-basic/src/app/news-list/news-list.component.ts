@@ -10,8 +10,8 @@ export class NewsListComponent implements OnInit {
 
   expandNews(id:number)  {
     this.selectedNewsId = id
-    return false
-  }
+    return false          // tell browser not to follow link 
+  }                       // otherwise would reload page
   constructor() {}
   ngOnInit()    {}
 }

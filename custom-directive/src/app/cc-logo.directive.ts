@@ -28,7 +28,7 @@ export class CcLogoDirective {
   // called whenever bound prop ccNumber changes
   ngOnChanges() {     
     const ccType = this.getCCType()
-    this.isHidden = ccType == undefined
+    this.isHidden = (ccType == undefined)
     if (!this.isHidden)  {
       this.imageSrc = `assets/${ccType}.png`
     }

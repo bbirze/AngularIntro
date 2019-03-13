@@ -1,7 +1,7 @@
-import {Injectable} from '@angular/core'
+import {Injectable} from '@angular/core' 
 
 // a DAO serivce needs to transform raw data into an object type usable 
-// by its consumers.  The object type we will be converving too is this
+// by its consumers.  The object type we will be converting to is this
 // News class.
 //
 export class News {                 

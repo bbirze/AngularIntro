@@ -8,6 +8,13 @@
      template variable is local to all our form controls!
 -->
 <form #theForm="ngForm">
+
+ <!-- Add require validation, CSS styling on errors
+      Template Variables 
+              theElement to print out apply CSS classes 
+              theModel set to ngModel to get control state
+      Error message shown depending on theModel state 
+--> 
   Full name: <br/>
   <span style="color:red"
         [hidden]="theModel.valid || theModel.untouched">
@@ -39,6 +46,9 @@
   <br/>
   Price: {{selectedEdition.price}}
   <br/>
+  <!-- Purchase button enabled dependent on theForm being valid
+            and the accept checkbox being checked
+  -->
   <button [disabled]="theForm.invalid || !acceptPolicy" 
           (click)="submitForm(theForm)">
     Purchase

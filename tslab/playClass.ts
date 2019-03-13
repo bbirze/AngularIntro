@@ -46,7 +46,7 @@ class Dining extends Product {
     }
     printDetails()  {
         super.printDetails();
-        console.log(`cusine: ${this.cusine}`);
+        console.log(`Cusine: ${this.cusine}`);
         console.log(`Child Price: ${this.childPrice}
         `);
     }
