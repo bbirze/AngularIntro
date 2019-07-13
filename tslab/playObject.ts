@@ -14,7 +14,7 @@ function configSomething(op: ConfigOption) {
     console.log("File     : %s", op.file)
     console.log("Max Size : %s", op.maxSize)
 }
-// json object infered to be ConfigOptin by compiler
+// json object infered to be ConfigOption by compiler
 // because using it as parameter to configSomething()
 //
 configSomething({

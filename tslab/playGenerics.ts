@@ -13,7 +13,6 @@ class ProductGen {
     constructor(id: number) {
         this.id = id;
     }
-
     printDetails()  {
         console.log(`Title: ${this.title}`);
         console.log(`ID   : ${this.id}`);
@@ -32,8 +31,7 @@ class TourGen extends ProductGen implements Bookable, Cancelable {
     }
     printDetails()  {
         super.printDetails();
-        console.log(`Duration: ${this.duration}
-        `);
+        console.log(`Duration: ${this.duration}`);
     }
 }
 
@@ -51,7 +49,6 @@ function cancelBookingGen<T extends Cancelable & ProductGen>(c: T) {
     console.log("Price    : %d ", c.price)
     console.log("Cancelation Fee: %d ", c.cancelationFee)
     console.log("Total Refund   : %d \n", c.price - c.cancelationFee)
-    testGen(c)
 }
 
 var t = new TourGen(1, "8 hours");

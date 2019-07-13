@@ -72,5 +72,5 @@ test(t);
 t.cancelationFee = 100.00
 cancelBooking(t)
 
-//cancelBooking(d)
+//cancelBooking(d)         // Error, Dining does not implement Cacelable I/F
 
