@@ -28,6 +28,11 @@ export class MagazineComponent implements OnInit {
     alert(JSON.stringify(requestData))
   }
 
+  // fullName = ""
+  // selectedEdition = this.editions[0] //Choose US by default
+  // selectedShipping = ""
+  // acceptPolicy = false
+  
   constructor() { }
 
   ngOnInit() {

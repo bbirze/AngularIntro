@@ -14,5 +14,5 @@ input[type="checkbox"] + span {
     cursor:pointer;
 }
 input[type="checkbox"]:checked + span {
-    background:url(checked.png) top no-repeat;
+    background:url(../../assets/checked.png) top no-repeat;
 }
