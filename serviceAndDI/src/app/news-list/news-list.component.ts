@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NewsService, News } from './news.service';
+import { NewsService, News } from '../services/news.service';
 
 @Component({
   selector: 'app-news-list',
@@ -14,11 +14,11 @@ export class NewsListComponent implements OnInit {
     this.selectedNewsId = id
     return false
   }
-  // no work done in constructor
+                                                  // no work done in constructor
   constructor(private newsSvc:NewsService) {      // service injected into field newsSvc field
     this.selectedNewsId = 0
    }
-  // do work in ngOnInit
+                                                  // do work in ngOnInit
   ngOnInit() {                                    // used injected field newsSvc
     this.newsItems = this.newsSvc.getNewsItems()  // to populate our newsItem field
   }

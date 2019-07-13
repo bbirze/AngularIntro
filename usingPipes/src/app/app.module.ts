@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { NewsListComponent } from './news-list/news-list.component';
-import { NewsSearchPipe } from './news-list/news-search.pipe';
+import { NewsSearchPipe } from './common/news-search.pipe';
 
 @NgModule({
   declarations: [
