@@ -5,8 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './html-editor.component.html',
   styleUrls: ['./html-editor.component.css']
 })
-export class HtmlEditorComponent implements OnInit {
-  userInput = "Enter HTML here!"
+export class HtmlEditorComponent  {
+  userInput = "<h3>This is Testing InnerHTML</h3>"
 
   constructor() { }
 
@@ -15,7 +15,6 @@ export class HtmlEditorComponent implements OnInit {
     this.userInput = newValue
   }
 
-  ngOnInit() {
-  }
+
 
 }
