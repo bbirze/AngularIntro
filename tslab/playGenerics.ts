@@ -41,7 +41,7 @@ function testGen(p: ProductGen)  {
 
 // use generic to ensure the type we get extends both
 // Cancelable And Product.  This lets us access title, price
-// and canclation Fee knowing they areguarenteed to be
+// and canclation Fee knowing they are guarenteed to be
 // properties of the object
 //
 function cancelBookingGen<T extends Cancelable & ProductGen>(c: T) {

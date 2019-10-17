@@ -9,41 +9,39 @@
 -->
 <form #theForm="ngForm">
 
- <!-- Add require validation, CSS styling on errors
+  <!-- Add require validation, CSS styling on errors
       Template Variables 
-              theElement to print out apply CSS classes 
+              theElement to print out CSS classes applied 
               theModel set to ngModel to get control state
       Error message shown depending on theModel state 
---> 
+  -->
   Full name: <br/>
-  <span style="color:red"
+  <span style="color:red" 
         [hidden]="theModel.valid || theModel.untouched">
     Please enter your name<br/>    
   </span>
-  <input name="fullName" type="text" [(ngModel)]="fullName"  
-        required  #theElement  #theModel="ngModel" /><br/>
-  Class names: {{theElement.className}}<br/>
-  Model Valid  : {{theModel.valid}}  -  Invalid  : {{theModel.invalid}}<br/>
-  Model Touched: {{theModel.touched}} - UnTouched: {{theModel.untouched}}<br/>
-  Model Dirty  : {{theModel.dirty}} -   Pristine : {{theModel.pristine}}<br/><br/>
-
-  Magazine edition: <br/>
+  <input name="fullName" type="text" [(ngModel)]="fullName" 
+        required #theElement #theModel="ngModel" />
+  <br/> Class names: {{theElement.className}}
+  <br/> Model Valid : {{theModel.valid}} - Invalid : {{theModel.invalid}}
+  <br/> Model Touched: {{theModel.touched}} - UnTouched: {{theModel.untouched}}
+  <br/> Model Dirty : {{theModel.dirty}} - Pristine : {{theModel.pristine}}<br/>
+  <br/> Magazine edition: <br/>
   <select name="selectedEdition" [(ngModel)]="selectedEdition">
     <option *ngFor="let e of editions" [ngValue]="e">
       {{e.edditionName}}
     </option>
-  </select><br/>
-
+  </select><br/> 
+  
   Shipping Option: <br/>
   <input name="selectedShipping" type="radio" 
-        [(ngModel)]="selectedShipping" value="GROUND" />Ground
+        [(ngModel)]="selectedShipping" value="GROUND" /> Ground
   <input name="selectedShipping" type="radio" 
-        [(ngModel)]="selectedShipping" value="AIR" />Air
-  <br/>
+        [(ngModel)]="selectedShipping" value="AIR" /> Air <br/>
 
   <label><input name="acceptPolicy" type="checkbox" [(ngModel)]="acceptPolicy"/>
-    I accept the terms and conditions</label>
-  <br/>
+    I accept the terms and conditions </label>
+  <br/> 
   Price: {{selectedEdition.price}}
   <br/>
   <!-- Purchase button enabled dependent on theForm being valid

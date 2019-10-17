@@ -25,6 +25,7 @@ export class CcLogoDirective {
     return undefined
   }
 
+  // ngOnChanges is a lifecycle method
   // called whenever bound prop ccNumber changes
   ngOnChanges() {     
     const ccType = this.getCCType()
