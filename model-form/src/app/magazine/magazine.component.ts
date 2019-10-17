@@ -18,9 +18,9 @@ export class MagazineComponent implements OnInit {
                                       // array not required if only one validator
   //fullName: new FormControl('', [Validators.required]),
     fullName: new FormControl('', Validators.required),     
-    selectedEdition: new FormControl(this.editions[0]),
+    selectedEdition: new FormControl(this.editions[0]),   // set iniital value
     selectedShipping: new FormControl(),
-    acceptPolicy: new FormControl(false),
+    acceptPolicy: new FormControl(false),                 // set iniital value
   })
 
   submitForm() {                        // get form control values from form 
@@ -28,6 +28,10 @@ export class MagazineComponent implements OnInit {
     alert(JSON.stringify(requestData))
   }
 
+  /*
+    individual properties no longer needed, name and value of each
+    input is kept in the FormControl object.
+  */
   // fullName = ""
   // selectedEdition = this.editions[0] //Choose US by default
   // selectedShipping = ""

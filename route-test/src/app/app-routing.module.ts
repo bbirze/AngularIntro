@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent },     // the Home startup page
   { path: 'about', component: AboutComponent },
   { path: 'news',  component: NewsComponent }, 
-  { path: '**', component: HomeComponent }, 
+  { path: '**', component: HomeComponent },   // wildcard for 404 situations
 ];
 
 @NgModule({
