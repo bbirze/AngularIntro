@@ -10,7 +10,7 @@ input[type="checkbox"] + span {
     height:32px;
     margin:-1px 4px 0 0;
     vertical-align:middle;
-    background:url(unchecked.png) left top no-repeat;
+    background:url(../../assets/unchecked.png) left top no-repeat;
     cursor:pointer;
 }
 input[type="checkbox"]:checked + span {
