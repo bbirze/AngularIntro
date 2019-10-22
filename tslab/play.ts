@@ -2,7 +2,7 @@ var age: number=20;
 console.log(age);
 
 function printPerson(name:string, age:number)  {
-    console.log(`Name: ${name} age: ${age}`);
+    console.log(`Name: ${name} age: ${age}`);   // template string
 }
  
 printPerson('Billy', 8);

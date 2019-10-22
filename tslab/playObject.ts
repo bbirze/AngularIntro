@@ -18,7 +18,8 @@ function configSomething(op: ConfigOption) {
 // because using it as parameter to configSomething()
 //
 configSomething({
-    directory: "/dir1",
     file: "persons.json",
+    directory: "/dir1",
+    //maxSize: 22,
 //    path: "persons.json"
 })

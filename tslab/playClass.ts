@@ -6,7 +6,7 @@ interface Cancelable {
     cancelationFee: number;
 }
 class Product {         // parent class
-    title: string;
+    title: string;      // properties Public by default
     price: number;
     id: number;
 
@@ -58,6 +58,7 @@ function test(p: Product)  {
 }
                         // cancelBooking takes an instance of a Cancelable as an arg
 function cancelBooking(c: Cancelable) {
+    //c.duration;
     console.log("Canceling booking, Charges: %d \n", c.cancelationFee)
 }
                         // Dining is a Product via inheritance

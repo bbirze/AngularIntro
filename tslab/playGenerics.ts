@@ -49,6 +49,8 @@ function cancelBookingGen<T extends Cancelable & ProductGen>(c: T) {
     console.log("Price    : %d ", c.price)
     console.log("Cancelation Fee: %d ", c.cancelationFee)
     console.log("Total Refund   : %d \n", c.price - c.cancelationFee)
+    //console.log("Durations   : %d \n", c.duration)
+    c.printDetails();
 }
 
 var t = new TourGen(1, "8 hours");
