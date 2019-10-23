@@ -1,4 +1,7 @@
-<!--textarea [(ngModel)]="userInput" rows="5" cols="40" ></textarea> -->
+<!-- 
+    Can split 2-way binding [(ngmodel)] into two 1-way binding directives
+-->
+<!-- textarea [(ngModel)]="userInput" rows="5" cols="40" ></textarea> -->
 <textarea [ngModel]="userInput" (ngModelChange)="updateHTML($event)" 
           rows="5" cols="40" ></textarea>
 <h4>Preview</h4>

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./news-list.component.css']
 })
 export class NewsListComponent implements OnInit {
-  selectedNewsId:number
+  selectedNewsId:number   // which news item is selected
 
   expandNews(id:number)  {
     this.selectedNewsId = id

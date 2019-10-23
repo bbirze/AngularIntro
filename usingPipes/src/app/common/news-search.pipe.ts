@@ -8,10 +8,10 @@ export class NewsSearchPipe implements PipeTransform {
 
     transform(sourceList: News[], searchText: string) : News[] {
         if (searchText === undefined || searchText.length ==0)  {
-            return sourceList                   // no search term given
+            return sourceList                       // no search term given
         }  
 
-        let reg = new RegExp(searchText, 'i')      // i flag means ignore case
+        let reg = new RegExp(searchText, 'i')       // i flag means ignore case
 
         return sourceList.filter(news =>
               news.title.search(reg) >=0 || news.body.search(reg) >=0) 
