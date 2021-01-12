@@ -4,7 +4,6 @@ interface Bookable {
 interface Cancelable {
     cancelationFee: number;
 }
-
 class ProductGen {
     title: string;
     price: number;
@@ -19,7 +18,6 @@ class ProductGen {
         console.log(`Price: ${this.price}`);
     }
 }
-
 class TourGen extends ProductGen implements Bookable, Cancelable {
     duration: string;
     availableDates: [Date];
@@ -31,7 +29,8 @@ class TourGen extends ProductGen implements Bookable, Cancelable {
     }
     printDetails()  {
         super.printDetails();
-        console.log(`Duration: ${this.duration}`);
+        console.log(`Duration: ${this.duration}
+                    `);                 // template strings make /n easy
     }
 }
 
@@ -45,12 +44,12 @@ function testGen(p: ProductGen)  {
 // properties of the object
 //
 function cancelBookingGen<T extends Cancelable & ProductGen>(c: T) {
+    console.log("CANCEL BOOKING ")
     console.log("Canceling: %s (%d) ", c.title, c.id)
     console.log("Price    : %d ", c.price)
     console.log("Cancelation Fee: %d ", c.cancelationFee)
     console.log("Total Refund   : %d \n", c.price - c.cancelationFee)
     //console.log("Durations   : %d \n", c.duration)
-    c.printDetails();
 }
 
 var t = new TourGen(1, "8 hours");

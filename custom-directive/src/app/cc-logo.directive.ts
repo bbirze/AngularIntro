@@ -1,8 +1,8 @@
 import { Directive, HostBinding, Input } from '@angular/core';
-// @HostBinding:  set properties on the directives's Host element or component 
+// @HostBinding:  access properties on the directives's Host element's DOM node 
 //                e.g. @HostBinding('src') imageSrc
 //
-// @HostListener: listen for events on the directive's Host element or component
+// @HostListener: listen for events generated on the directive's Host element 
 //                e.g. @HostListener(click)
 
 @Directive({
@@ -34,7 +34,6 @@ export class CcLogoDirective {
       this.imageSrc = `assets/${ccType}.png`
     }
   }
-
   constructor() {}    // use @HostBinding for selected DOM elements
                       // instead of injecting ElementRef in constructor
 

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sport-subscibe.component.css']
 })
 export class SportSubscibeComponent implements OnInit {
-  sports = [ "Volleyball", "Basketball", "Soccer", "Dominos" ]
+  sports = [ "Volleyball", "Basketball", "Soccer" ]
 
   constructor() { }
 

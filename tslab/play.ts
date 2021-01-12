@@ -11,7 +11,7 @@ printPerson('Billy', 8);
 //var age: string = "Too Old!";            // can't assign string to a num var
 console.log(age);
 
-let letVar = 'some value'
-//let letVar = 'another value'          // cannot redeclare let vars
 var varVar = 'some value'
 var varVar = 'another value'            // redef no prob with var
+let letVar = 'some value'
+//let letVar = 'another value'          // cannot redeclare let vars

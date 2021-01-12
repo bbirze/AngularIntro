@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./news-list.component.css']
 })
 export class NewsListComponent implements OnInit {
-  selectedNewsId:number
   newsItems = [            // no longer hard coding news items in our tempate!
     {
         title: "BMW Researching Self-Driving Cars",
@@ -29,13 +28,14 @@ export class NewsListComponent implements OnInit {
         body: "Washington D.C. - After eating brownies left by a good samaratin in the congressional breakroom, members of congress laughed, hugged, and sang Kumbaya with their peers, regardless of party affiliation."
     }
   ]
+  selectedNewsId:number
+
+  constructor() {
+    this.selectedNewsId = 0     // start with 1st item selected
+  }
   expandNews(id:number)  {
     this.selectedNewsId = id
     return false
   }
-  constructor() {
-    this.selectedNewsId = 0     // start with 1st item selected
-   }
-  ngOnInit() {
-  }
+  ngOnInit() { }
 }

@@ -7,6 +7,8 @@ Full name: <br/>
 <input type="text" [(ngModel)]="fullName" /><br/>
 
 Magazine edition: <br/>
+<!-- Since each option value is an object, 
+     so must use [ngValue] instead of value-->
 <select [(ngModel)]="selectedEdition">
   <option *ngFor="let e of editions" [ngValue]="e">
     {{e.edditionName}}
