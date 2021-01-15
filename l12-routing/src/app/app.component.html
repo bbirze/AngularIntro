@@ -1,0 +1,10 @@
+<h1>Simple SPA!</h1>
+<!-- Set anchors to use routes to find components  -->
+<a [routerLink]="['/']">Home</a> &nbsp;
+<a [routerLink]="['/news']">News</a>  &nbsp;
+<a [routerLink]="['/about']">About</a> &nbsp;
+
+<div id=main>
+  <!-- render template of "routed to" component  here!  -->
+  <router-outlet></router-outlet>
+</div>

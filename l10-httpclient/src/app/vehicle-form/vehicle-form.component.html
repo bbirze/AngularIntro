@@ -1,0 +1,34 @@
+<form ngForm #myForm="ngForm">
+    VIN:<br/>
+    <input type='text' name='veh_vin' #vin='ngModel' ngModel 
+           [ngModel]='vehicle.VIN' required minlength='3'/>
+    <span class='error' *ngIf='vin.invalid && vin.dirty'>
+        Must be at least 3 characters
+    </span><br/>
+    Year:<br/>
+    <input type='number' name='veh_year' ngModel [ngModel]='vehicle.year' required/><br/>
+    Make:<br/>
+    <input type='text' name='veh_make' ngModel [ngModel]='vehicle.make' required/><br/>
+    Model:<br/>
+    <!-- input type='text' name='veh_model' ngModel [ngModel]='vehicle.model' required/ --><br/>
+    <input type='text' name='veh_model' ngModel [(ngModel)]='vehicle.model' required/><br/>
+    Mileage:<br/>
+    <input type='number' name='veh_mileage' ngModel [ngModel]='vehicle.mileage' required/><br/>
+    Price:<br/>
+    <input type='number' name='veh_price' ngModel [ngModel]='vehicle.price' required/><br/>
+    <label>
+        <input type='checkbox' name='veh_featured' [ngModel]='vehicle.featured' ngModel/>
+        Featured Vehicle
+    </label><br/>
+
+    <p *ngIf='myForm.invalid' class='error'>Please enter valid values</p>
+    <button (click)='handleSubmit(myForm)' [disabled]='myForm.invalid'>
+        Submit
+    </button>
+    <button *ngIf='showCancel' (click)='handleCancel()'>
+        cancel
+    </button>
+</form>
+<!--
+
+-->

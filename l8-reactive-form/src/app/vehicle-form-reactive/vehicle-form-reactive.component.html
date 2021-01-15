@@ -1,0 +1,23 @@
+<form [formGroup]='vehicalForm'>
+    VIN:<br/>
+    <input type='text' formControlName='veh_vin' />
+    <span class='error' *ngIf='vehicalForm.controls.veh_vin.invalid &&
+            vehicalForm.controls.veh_vin.dirty'>Must be >= 3 characters, I, O, and Q are not allowed</span><br/>
+    Year:<br/>
+    <input type='text' formControlName='veh_year' /><br/>
+    Make:<br/>
+    <input type='text' formControlName='veh_make' /><br/>
+    Model:<br/>
+    <input type='text' formControlName='veh_model' /><br/>
+    MileageVIN:<br/>
+    <input type='text' formControlName='veh_mileage' /><br/>
+    Price:<br/>
+    <input type='text' formControlName='veh_price' /><br/>
+    <label>
+        <input type='checkbox' formControlName='veh_featured' />
+        Featured vehicle
+    </label><br/>
+    <p *ngIf='vehicalForm.invalid' class='error'>Please enter valid values</p>
+    <button (click)='handleSubmit()' [disabled]='vehicalForm.invalid'>
+        Submit</button>
+</form>
