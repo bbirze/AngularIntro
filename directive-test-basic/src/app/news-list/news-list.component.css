@@ -1,8 +1,0 @@
-/* CSS class collapsed when applied to an element will set
-   the DOM Node's 'display' style to none, which will hide it
-   by not displaying it
-*/
-
-.collapsed {
-    display: none;
-}
