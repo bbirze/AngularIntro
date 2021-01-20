@@ -1,8 +1,9 @@
-<form ngForm #myForm="ngForm">
+<form #myForm="ngForm">
     VIN:<br/>
+    <!-- Validate VIN, required and must be >=3 characters long -->
     <input type='text' name='veh_vin' #vin='ngModel' ngModel 
            required minlength='3'/>
-    <span class='error' *ngIf='vin.invalid && vin.dirty'>
+    <span *ngIf='vin.invalid && vin.dirty' class='error' >
         Must be at least 3 characters
     </span><br/>
     Year:<br/>

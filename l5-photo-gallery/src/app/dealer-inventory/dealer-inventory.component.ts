@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Vehicle } from '../vehicle'
 
-@Component({
+@Component({ 
   selector: 'app-dealer-inventory',
   templateUrl: './dealer-inventory.component.html',
   styleUrls: ['./dealer-inventory.component.css']
@@ -51,11 +51,11 @@ export class DealerInventoryComponent implements OnInit {
     },
   ]
 
-handlePhotoNavigation(photoIndex:number, car:Vehicle)  { 
-  if(photoIndex == car.photos.length-1)  {
-    alert('Come visit us in our showroom Soon!')
+  handlePhotoNavigation(photoIndex:number, car:Vehicle)  { 
+    if(photoIndex == car.photos.length-1)  {
+      alert('Come visit us in our showroom Soon!')
+    }
   }
-}
 
   trackByVIN(index:number, car:Vehicle) :string {
     return car.VIN

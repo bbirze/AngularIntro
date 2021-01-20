@@ -14,10 +14,12 @@
     <p *ngIf="car.featured">Featured car of the month!</p>
     <p>VIN: {{car.VIN}}</p>
     <p>{{car.mileage}} Miles, {{car.price}}</p>
+    <!-- Add vehicle form for editing thie time, show the cancel button 
+         use vehicalToEdit to determin if show or close form  -->
     <app-vehicle-form *ngIf='vehicleToEdit == car' [showCancel]='true' [vehicle]='car' 
          (on-submit)='commitEdit($event)'  (onCancel) ='cancelEdit()'>
     </app-vehicle-form>
-    <p>
+    <p>                                    <!-- add edit button -->
         <button (click)="deleteVehicle(car)">Delete</button>
         <button (click)="beginEditing(car)">Edit</button>
     </p>

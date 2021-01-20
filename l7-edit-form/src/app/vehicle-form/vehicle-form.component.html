@@ -10,8 +10,8 @@
     Make:<br/>
     <input type='text' name='veh_make' ngModel [ngModel]='vehicle.make' required/><br/>
     Model:<br/>
-    <!-- input type='text' name='veh_model' ngModel [ngModel]='vehicle.model' required/ --><br/>
-    <input type='text' name='veh_model' ngModel [(ngModel)]='vehicle.model' required/><br/>
+    <input type='text' name='veh_model' ngModel [ngModel]='vehicle.model' required/ ><br/>
+    <!-- input type='text' name='veh_model' ngModel [(ngModel)]='vehicle.model' required/><br/-->
     Mileage:<br/>
     <input type='number' name='veh_mileage' ngModel [ngModel]='vehicle.mileage' required/><br/>
     Price:<br/>
@@ -24,7 +24,8 @@
     <p *ngIf='myForm.invalid' class='error'>Please enter valid values</p>
     <button (click)='handleSubmit(myForm)' [disabled]='myForm.invalid'>
         Submit
-    </button>
+    </button> 
+    <!-- add cancel button if parent says to -->
     <button *ngIf='showCancel' (click)='handleCancel()'>
         cancel
     </button>

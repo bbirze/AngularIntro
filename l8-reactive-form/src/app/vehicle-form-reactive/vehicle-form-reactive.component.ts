@@ -40,8 +40,7 @@ export class VehicleFormReactiveComponent implements OnInit {
             this.vehicle.mileage, Validators.required),
       veh_price: new FormControl(                
             this.vehicle.price, Validators.required),
-      veh_featured: new FormControl(                
-            this.vehicle.featured, Validators.required),  
+      veh_featured: new FormControl(this.vehicle.featured),  
     })
   }
 

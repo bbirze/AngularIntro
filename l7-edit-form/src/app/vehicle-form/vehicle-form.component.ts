@@ -10,10 +10,9 @@ import { Vehicle } from '../vehicle';
 export class VehicleFormComponent implements OnInit {
 
   @Input() vehicle = new Vehicle("", 0, "", "", 0, 0, false, [])
-  @Input() showCancel = false;
+  @Input() showCancel = false
   @Output("on-submit") emitter = new EventEmitter
   @Output() onCancel = new EventEmitter
-
 
   handleCancel()  {
     console.log("in vehicleForm.handleCancel() event handler")
@@ -27,8 +26,8 @@ export class VehicleFormComponent implements OnInit {
       input.veh_vin,
       input.veh_year,
       input.veh_make,
-      //input.veh_model,            // template uses name='veh_model', added to form with associated value
-      this.vehicle.model,           // template uses [(ngModel)]='vehicle.model for 2-way binding
+      input.veh_model,            // template uses name='veh_model', added to form with associated value
+      //this.vehicle.model,           // template uses [(ngModel)]='vehicle.model for 2-way binding
       input.veh_mileage,
       input.veh_price,
       input.veh_featured === "" ? false : input.veh_featured, []
