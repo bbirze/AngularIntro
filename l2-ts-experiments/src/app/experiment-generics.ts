@@ -1,5 +1,7 @@
 import { DefaultValueAccessor } from "@angular/forms"
 
+// Part 8: Using Generics
+//----------------------------
 class Product {
  
     constructor(public id: number,
@@ -17,8 +19,9 @@ class Product {
 }
 
 let bball = new Product(100, 'Baseball Gloves', 39.95)
-let golf = new Product(200, 'Glof Club', 129.95)
+let golf = new Product(200, 'Golf Club', 129.95)
 
+                    // database of number key to product iinstance
 let database = new Map<number, Product>()
 database.set(bball.id, bball)
 database.set(golf.id, golf)
@@ -36,9 +39,10 @@ function getOrDefault<K, V> (key: K,
         let data: V = map.get(key)
 
         if (data === undefined) {
-            return defaultVal
+            console.log(`Key: ${key} not found in database`)
+           return defaultVal
         } else {
-            return data
+             return data
         }
 }
 

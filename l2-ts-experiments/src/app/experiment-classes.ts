@@ -1,3 +1,6 @@
+// Part 6: Creating and Using Classes
+//-----------------------------------
+
 class Product1 {
     title: string
     price: number
@@ -21,7 +24,7 @@ p1.price = 39.95
 p1.printDetails()
 
 class Product2 {
- 
+                        // define fields in constructor
     constructor(public id: number,
                 public title: string,
                 public price: number)  {
