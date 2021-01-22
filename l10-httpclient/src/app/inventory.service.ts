@@ -8,6 +8,7 @@ import { Observable } from 'rxjs'
 })
 export class InventoryService {
 
+  // Base URL to access our RESTful Controller
   private baseURL = "http://localhost:3000/vehicle"
 
   public getInventory() : Observable<Vehicle[]> {

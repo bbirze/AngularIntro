@@ -12,6 +12,7 @@ export class AddBookComponent implements OnInit {
   book:Book = new Book
 
   addBook() {
+    console.log(`addBook ${this.book.isbn} ${this.book.title} ${this.book.price}`)
     this.dataService.saveBook(this.book).subscribe(_ =>  {
                   // Go back to the home page
       this.router.navigate(['/'])

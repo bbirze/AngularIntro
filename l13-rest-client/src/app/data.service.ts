@@ -8,7 +8,6 @@ export class Book  {
   price: number
 }
 
-
 @Injectable({
   providedIn: 'root'
 })

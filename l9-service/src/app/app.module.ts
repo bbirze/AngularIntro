@@ -24,7 +24,7 @@ import { VehicleFormReactiveComponent } from './vehicle-form-reactive/vehicle-fo
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [],              // services registered here can not be shaken out of build!
   bootstrap: [AppComponent]
 })
 export class AppModule { }

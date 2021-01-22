@@ -2,12 +2,15 @@
 
 <div *ngIf='book != undefined'>
     <div>
+        ISBN:
         <input type='text' [(ngModel)]='book.isbn' paceholder='ISBN'>
     </div>
     <div>
+        Title : 
         <input type='text' [(ngModel)]='book.title' paceholder='Title'>
     </div>
     <div>
+        Price: 
         <input type='number' [(ngModel)]='book.price' paceholder='Price'>
     </div>
     <div>

@@ -28,7 +28,7 @@ export class DealerInventoryComponent implements OnInit {
     this.inventory = this.inventorySvc.getInventory()
   }
   
-  commitEdit(v:Vehicle)  {
+  commitEdit(v:Vehicle)  {  
     this.inventorySvc.updateVehicle(this.vehicleToEdit.VIN, v)
     this.inventory = this.inventorySvc.getInventory()
 
@@ -43,8 +43,6 @@ export class DealerInventoryComponent implements OnInit {
     console.log(`in dealerInventory.cancelEdit() event handler with vehicle to edit: ${this.vehicleToEdit}`)
     this.vehicleToEdit = undefined
   }
-
-
 
   handlePhotoNavigation(photoIndex:number, car:Vehicle)  { 
     if(photoIndex == car.photos.length-1)  {

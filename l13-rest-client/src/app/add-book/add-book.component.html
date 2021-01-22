@@ -1,13 +1,16 @@
 <h3>Add a Book</h3>
 
 <div>
-    <input type='text' [(ngModel)]='book.isbn' paceholder='ISBN'>
+    ISBN:
+    <input type='text' [(ngModel)]='book.isbn' placeholder='ISBN'>
 </div>
 <div>
-    <input type='text' [(ngModel)]='book.title' paceholder='Title'>
+    Title : 
+    <input type='text' [(ngModel)]='book.title' placeholder='Title'>
 </div>
 <div>
-    <input type='number' [(ngModel)]='book.price' paceholder='Price'>
+    Price: 
+    <input type='number' [(ngModel)]='book.price' placeholder='Price'>
 </div>
 <div>
     <button (click)='addBook()'>Save</button>

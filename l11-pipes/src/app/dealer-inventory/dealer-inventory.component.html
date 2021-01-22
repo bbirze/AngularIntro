@@ -13,7 +13,12 @@
     </p>
     <p *ngIf="car.featured">Featured car of the month!</p>
     <p>VIN: {{car.VIN}}</p>
-    <p>{{car.mileage | number:'':'fr-CA'}} Miles, {{car.price | currency:'CAD':'symbol':'':'fr-CA'}}</p>    <app-vehicle-form-reactive *ngIf='vehicleToEdit == car' [vehicle]='car' 
+    <p>{{car.mileage}} Miles, {{car.price}}</p>    
+    <p>{{car.mileage | number}} Miles, {{car.price | currency}}</p>    
+    <p>{{car.mileage | number}} Miles, {{car.price | currency:'EUR':'symbol'}}</p>   
+    <p>{{car.mileage | number:'':'fr'}} Miles, {{car.price | currency:'fr':'symbol':'':'fr'}}</p>
+    <p>{{car.mileage | number:'':'fr-CA'}} Miles, {{car.price | currency:'CAD':'symbol':'':'fr-CA'}}</p>    
+   <app-vehicle-form-reactive *ngIf='vehicleToEdit == car' [vehicle]='car' 
          (on-submit)='commitEdit($event)'>
     </app-vehicle-form-reactive>
     <p>

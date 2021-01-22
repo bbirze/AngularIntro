@@ -10,12 +10,12 @@ import { DataService, Book } from '../data.service'
 export class EditBookComponent implements OnInit {
 
   book:Book
-
+ 
   constructor(private dataService: DataService, 
               private activeRoute: ActivatedRoute,
               private router:Router) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {                    // subscribe to params for route parameter
     this.activeRoute.paramMap.subscribe(params => {
       let isbn = params.get('isbn')     // retrieve ISBN # from path parameter
                                         // fetch the book by ISBN
