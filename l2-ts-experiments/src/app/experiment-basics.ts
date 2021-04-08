@@ -1,7 +1,8 @@
 import { MinLengthValidator } from "@angular/forms"
 
-console.log('try TS code out')
-
+console.log(`
+    Basic TS code!
+    ==================`)
 // Part 2: Variable Types
 //------------------------
 let arg =5;
@@ -9,8 +10,6 @@ let arg =5;
 var age: number = 20
 //var age: number = "Too Old"
 console.log('Age is', age)
-
-
 
 // let arg =5;
 // var age: number = 20
@@ -23,7 +22,7 @@ function printPerson(name:string, age:number)  {
 }
 
 printPerson("Billy", 8)
-//printPerson(8, "Billy")
+// printPerson(8, "Billy")
 
 
 // Part 5: Function Return Types

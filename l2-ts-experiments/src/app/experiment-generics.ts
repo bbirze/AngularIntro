@@ -2,6 +2,10 @@ import { DefaultValueAccessor } from "@angular/forms"
 
 // Part 8: Using Generics
 //----------------------------
+
+console.log(`
+    Try out Generics!
+    ==================`)
 class Product {
  
     constructor(public id: number,
@@ -12,9 +16,9 @@ class Product {
 
     printDetails() {
         console.log(`Product:  `)
-        console.log(`\tTitle: ${this.title}`)
-        console.log(`\tID: ${this.id}`)
-        console.log(`\tPrice: ${this.price}`)
+        console.log(`   Title: ${this.title}`)
+        console.log(`   ID: ${this.id}`)
+        console.log(`   Price: ${this.price}`)
     }
 }
 
@@ -26,7 +30,8 @@ let database = new Map<number, Product>()
 database.set(bball.id, bball)
 database.set(golf.id, golf)
 
-console.log(`\nGenerics: Printing contents of the database `)
+console.log(`
+    Generics: Printing contents of the database `)
 
 database.forEach((p, key) =>  { 
     console.log(`Key is ${key}`)
@@ -36,18 +41,18 @@ database.forEach((p, key) =>  {
 function getOrDefault<K, V> (key: K,
                              map: Map<K, V>,
                              defaultVal: V) : V {
-        let data: V = map.get(key)
+    let data: V = map.get(key)
 
-        if (data === undefined) {
-            console.log(`Key: ${key} not found in database`)
-           return defaultVal
-        } else {
-             return data
-        }
+    if (data === undefined) {
+        console.log(`Key: ${key} not found in database`)
+        return defaultVal
+    } else {
+            return data
+    }
 }
 
 let p3 = getOrDefault(11, database, new Product(0, "Unknown", 0.0))
 
-
-console.log(`\nGenerics: Printing return from getOrDefault `)
+console.log(`
+    Generics: Printing return from getOrDefault `)
 p3.printDetails()
