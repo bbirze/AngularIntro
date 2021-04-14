@@ -1,0 +1,57 @@
+ ready to put into chat... 
+  
+Course: WA3009 Introduction to Angular 10 Programming
+Class ID: 466992
+Type: Corporate Virtual Class
+Status: Confirmed
+Date: 04/12/2021 - 04/14/2021
+Class times: 09:00 AM - 05:00 PM Eastern
+Class code: 466992-13331. Use this for evaluation.
+Client: Travelers
+----------------------------------------------
+Day 1
+----------------------------------------------
+Zoom Account Login Credentials
+Start Link: https://zoom.us/s/95300341180
+Login|Username: classroom3@webagesolutions.com
+Login|Password: WebAge03
+Meeting Title: WA3009 Introduction to Angular 10 Programming
+Meeting ID: 953 0034 1180
+Passcode: soniefolan
+ 
+================
+VM Login
+----------------
+http://toronto.webagesolutions.com/
+
+PC-466992-10X
+For example PC-466992-105
+
+userName: wasadmin
+password: wasadmin
+
+PC-466992-INST
+================
+
+killall node
+
+
+Evals
+----------------
+http://www.webagesolutions.com/eval 
+Class Code: : 466992-13331
+
+----------------------------------------------
+Day 2
+----------------------------------------------
+M
+
+----------------------------------------------
+Day 3
+----------------------------------------------
+
+Evals
+----------------
+www.webagesolutions.com/eval 
+Class Code: : 466992-13331
+----------------------------------------------
