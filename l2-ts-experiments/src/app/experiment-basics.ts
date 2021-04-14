@@ -1,4 +1,3 @@
-import { MinLengthValidator } from "@angular/forms"
 
 console.log(`
     Basic TS code!
@@ -31,4 +30,5 @@ function isMinimumAge(age: number) : boolean {
     return age >= 21
 }
 
-console.log('Is minimum age: ', isMinimumAge(22))
+age = 22
+console.log(`Is ${age} minimum age?: ${isMinimumAge(age)}`)

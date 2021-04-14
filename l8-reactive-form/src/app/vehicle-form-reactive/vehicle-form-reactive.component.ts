@@ -6,9 +6,10 @@ function validate_VIN(control:FormControl) {
   const banned = [ 'I', 'O', 'Q']
 
   if (banned.some(str => control.value.includes(str))) {
-    return { error: 'Must not contain I, O, or Q'}
+                              // return object, fail!
+    return { error: 'Must not contain I, O, or Q'}  
    } else {
-     return null      // all good
+     return null              // Return null, all good!
    }
 }
 
@@ -19,7 +20,7 @@ function validate_VIN(control:FormControl) {
 })
 export class VehicleFormReactiveComponent implements OnInit {
 
-  vehicalForm:FormGroup 
+  vehicalForm : FormGroup 
   @Input() vehicle = new Vehicle("", 0, "", "", 0, 0, false, [])
   @Output("on-submit") emitter = new EventEmitter
 
@@ -28,8 +29,9 @@ export class VehicleFormReactiveComponent implements OnInit {
   ngOnInit(): void {
     console.log("instantiating this.vehicalForm")
     this.vehicalForm = new FormGroup({
-      veh_vin: new FormControl(                 // if >1 validaor, put in an array
-            this.vehicle.VIN, [Validators.minLength(3), Validators.required, validate_VIN]),
+      veh_vin: new FormControl(
+            this.vehicle.VIN,                   // if >1 validaor, put in an array
+            [Validators.minLength(3), Validators.required, validate_VIN]),
       veh_year: new FormControl(                // no array needed for only 1 validator
             this.vehicle.year, Validators.required),
       veh_make: new FormControl(                

@@ -10,6 +10,7 @@ import { PhotoGalleryComponent } from './photo-gallery/photo-gallery.component';
 import { VehicleFormComponent } from './vehicle-form/vehicle-form.component';
 import { VehicleFormReactiveComponent } from './vehicle-form-reactive/vehicle-form-reactive.component';
 
+                                  // imported in AppModule, so part of application bundle
 import  '@angular/common/locales/global/fr';
 import  '@angular/common/locales/global/fr-CA';
 

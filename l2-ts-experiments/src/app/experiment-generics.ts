@@ -1,17 +1,13 @@
-import { DefaultValueAccessor } from "@angular/forms"
-
 // Part 8: Using Generics
 //----------------------------
 
 console.log(`
     Try out Generics!
     ==================`)
-class Product {
- 
+class Product { 
     constructor(public id: number,
                 public title: string,
                 public price: number)  {
-        this.id = id
     }
 
     printDetails() {

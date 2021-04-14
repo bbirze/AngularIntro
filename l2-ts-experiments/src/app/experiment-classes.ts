@@ -31,7 +31,6 @@ class Product2 {
     constructor(public id: number,
                 public title: string,
                 public price: number)  {
-        this.id = id
     }
 
     printDetails() {

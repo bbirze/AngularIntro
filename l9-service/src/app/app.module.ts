@@ -8,7 +8,7 @@ import { DealerInventoryComponent } from './dealer-inventory/dealer-inventory.co
 import { PhotoGalleryComponent } from './photo-gallery/photo-gallery.component';
 import { VehicleFormComponent } from './vehicle-form/vehicle-form.component';
 import { VehicleFormReactiveComponent } from './vehicle-form-reactive/vehicle-form-reactive.component';
-
+import { InventoryService } from './inventory.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,8 @@ import { VehicleFormReactiveComponent } from './vehicle-form-reactive/vehicle-fo
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [],              // services registered here can not be shaken out of build!
+  // providers: [InventoryService],         // services registered here can not be shaken out of build!
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

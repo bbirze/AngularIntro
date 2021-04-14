@@ -11,9 +11,9 @@ export class VehicleFormComponent implements OnInit {
 
   @Output("on-submit") emitter = new EventEmitter
 
-  handleSubmit(nForm:NgForm)  {
-    const input = nForm.value
-    const v = new Vehicle(
+  handleSubmit(nForm:NgForm)  {     // onSubmit event handler
+    const input = nForm.value       // form value JSON object
+    const v = new Vehicle(          // instantiate Vehicle from form values
       input.veh_vin,
       input.veh_year,
       input.veh_make,
@@ -22,7 +22,7 @@ export class VehicleFormComponent implements OnInit {
       input.veh_price,
       input.veh_featured === "" ? false : input.veh_featured, []
     )
-    this.emitter.emit(v)
+    this.emitter.emit(v)            // emit new Vehicle instant to parent
   }
 
   constructor() {}

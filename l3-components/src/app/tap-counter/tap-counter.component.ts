@@ -12,9 +12,12 @@ export class TapCounterComponent implements OnInit {
     this.tapCount +=1
   }
 
-  constructor() { }
+  constructor() { 
+    console.log(`Creating TapCounterComponent instance ${this}!`)
+   }
 
   ngOnInit(): void {
+    console.log(`ngOnInit() for TapCounterComponent ${this}!`)
   }
 
 }

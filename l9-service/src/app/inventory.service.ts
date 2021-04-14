@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Vehicle } from './vehicle';
 
+//@Injectable()                         // Angular 5 way, let AppModule register us
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root'                    // register with the AppModule injector
 })
-//@Injectable()
 export class InventoryService {
 
-  private inventory: Vehicle[] = []
-    /*
+  // private inventory: Vehicle[] = []
+// /*
    private inventory: Vehicle[] = [     // if want a mock.... 
     {
       VIN: "Y123",
@@ -31,7 +31,7 @@ export class InventoryService {
       photos: ["/assets/b-1.png", "/assets/b-2.png", "/assets/b-3.png", "/assets/b-4.png"]
     },
   ]
-*/
+// */
  
   public addVehicle(v:Vehicle)  {             // C: Create
     this.inventory.push(v)
