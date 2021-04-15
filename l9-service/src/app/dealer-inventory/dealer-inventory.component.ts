@@ -11,28 +11,29 @@ export class DealerInventoryComponent implements OnInit {
    
   inventory:Vehicle[] = []
   vehicleToEdit:Vehicle = undefined
-
+                                            // Inject the InventoryService
   constructor(private inventorySvc:InventoryService) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {                        // use service to populate inventory
     this.inventory = this.inventorySvc.getInventory()
   }
 
-  addVehicle(v:Vehicle)  {
+  addVehicle(v:Vehicle)  {                  // C: Create
     this.inventorySvc.addVehicle(v)
-    this.inventory = this.inventorySvc.getInventory()
-  }
- 
-  deleteVehicle(car:Vehicle) {
-    this.inventorySvc.deleteVehicle(car)
+                                            // R: Retrieve
     this.inventory = this.inventorySvc.getInventory()
   }
   
-  commitEdit(v:Vehicle)  {  
+  commitEdit(v:Vehicle)  {                  // U: Update
     this.inventorySvc.updateVehicle(this.vehicleToEdit.VIN, v)
     this.inventory = this.inventorySvc.getInventory()
 
     this.vehicleToEdit = undefined
+  }
+
+  deleteVehicle(car:Vehicle) {              // D: Delete
+    this.inventorySvc.deleteVehicle(car)
+    this.inventory = this.inventorySvc.getInventory()
   }
 
   beginEditing(v:Vehicle)  {

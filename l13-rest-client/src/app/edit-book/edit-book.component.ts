@@ -23,7 +23,7 @@ export class EditBookComponent implements OnInit {
         this.book = book
       })
     })
-  }
+  }  //  NEED onDestroy to unsubscribe
 
   updateBook()  {
     this.dataService.saveBook(this.book).subscribe(_ => {                              

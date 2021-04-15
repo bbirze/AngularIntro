@@ -21,20 +21,20 @@ export class DealerInventoryComponent implements OnInit {
 
   addVehicle(v:Vehicle)  {
     this.inventorySvc.addVehicle(v).subscribe(() => {
-      this.inventory.push(v)
+      this.inventory.push(v)            // update local copy
     })
   }
  
   deleteVehicle(car:Vehicle) {
     this.inventorySvc.deleteVehicle(car)
-    .subscribe(() => {             // update local copy of the list
+    .subscribe(() => {                  // update local copy of the list
         this.inventory = this.inventory.filter(v => v.VIN !== car.VIN)
      })
    }
   
   commitEdit(v:Vehicle)  {
     this.inventorySvc.updateVehicle(this.vehicleToEdit.VIN, v)
-    .subscribe(() => {
+    .subscribe(() => {                  // update local copy of Vehical
       Object.assign(this.vehicleToEdit, v)
       this.vehicleToEdit = undefined
     })

@@ -4,20 +4,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { TapCounterComponent } from './tap-counter/tap-counter.component';
 import { DealerInventoryComponent } from './dealer-inventory/dealer-inventory.component';
 import { PhotoGalleryComponent } from './photo-gallery/photo-gallery.component';
 import { VehicleFormComponent } from './vehicle-form/vehicle-form.component';
 import { VehicleFormReactiveComponent } from './vehicle-form-reactive/vehicle-form-reactive.component';
 
-                                  // imported in AppModule, so part of application bundle
-import  '@angular/common/locales/global/fr';
-import  '@angular/common/locales/global/fr-CA';
+                                  // Locals imported in AppModule, soaccessable to rest of app
+import  '@angular/common/locales/global/fr';          // import French locale
+import  '@angular/common/locales/global/fr-CA';       // import Fench Canadian locale
 
 @NgModule({
   declarations: [
     AppComponent,
-    TapCounterComponent,
     DealerInventoryComponent,
     PhotoGalleryComponent,
     VehicleFormComponent,

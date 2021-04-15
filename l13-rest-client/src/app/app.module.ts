@@ -20,7 +20,7 @@ import { EditBookComponent } from './edit-book/edit-book.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
+    FormsModule,        // not using forms, but need ngModel for 2-way binding
   ],
   providers: [],
   bootstrap: [AppComponent]

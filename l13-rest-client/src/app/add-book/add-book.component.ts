@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataService, Book } from '../data.service'
 
-
 @Component({
   selector: 'app-add-book',
   templateUrl: './add-book.component.html',

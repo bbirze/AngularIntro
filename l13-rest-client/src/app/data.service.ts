@@ -15,6 +15,10 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
+  /* No baseRef used!  We are talking to our Dev Server
+  *  on port 4200, who is forwarding request to the 
+  *  Book Server as a reverse proxy 
+  */
   getBooks(): Observable<Book[]>  {
     return this.http.get<Book[]>(`/books/`)
   }

@@ -42,11 +42,10 @@ export class InventoryService {
   }
                                               // U: Update
   public updateVehicle(oldVIN:string, newVehicle:Vehicle)  {
-    const oldVehicle = this.inventory.find(
-      v=> v.VIN === oldVIN
-    )
+    const oldVehicle = this.inventory
+        .find(v=> v.VIN === oldVIN)
 
-    if (oldVehicle != undefined)  {
+    if (oldVehicle != undefined)  { 
       Object.assign(oldVehicle, newVehicle)
     }
   }
@@ -54,7 +53,6 @@ export class InventoryService {
   public deleteVehicle(vehicleToDelete:Vehicle)  {
     this.inventory= this.inventory.filter(v => v.VIN !== vehicleToDelete.VIN)
   }
-
 
   constructor() { }
 }
